@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 Route::group(['prefix' => 'article', 'middleware' => 'auth'], function(){
-    Route::get('index', 'ArticleController@index');
+    Route::get('index', 'ArticleController@index')->name('top');
 });
 
 // Route::resource('articles', 'ArticleController')->only([
