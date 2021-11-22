@@ -15,6 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::group(['prefix' => 'article', 'middleware' => 'auth'], function(){
+    Route::get('index', 'ArticleController@index');
+});
+
+// Route::resource('articles', 'ArticleController')->only([
+//     'index', 'show'
+// ]);
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
