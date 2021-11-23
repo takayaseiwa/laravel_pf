@@ -1,0 +1,60 @@
+.jumbotron-title {
+    font-size: 5vw;
+    font-weight: bold;
+    color: rgb(255, 140, 0);
+    -webkit-text-stroke: 3px rgb(83, 83, 83);
+}
+
+.jumbotron-text {
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(255, 140, 0);
+    margin-top: 2vh;
+    background-color: rgba(14, 236, 240);
+    padding: 0 10px;
+}
+
+.absolute-jumbotron {
+    position: absolute;
+    top: 50%; /*親要素を起点に上から50%*/
+    left: 50%; /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.absolute-button {
+    position: absolute;
+    top: 85%; /*親要素を起点に上から85%*/
+    left: 45%; /*親要素を起点に左から50%*/
+    transform: translateY(-50%) translateX(-50%); /*要素の大きさの半分ずつを戻す*/
+    -webkit-transform: translateY(-50%) translateX(-45%);
+}
+
+.btn-origin-login {
+    display: inline-block;
+    color: #ffffff;
+    background-color: rgba(128, 128, 128, 0.718);
+    font-family: "Arial";
+    font-weight: 500;
+    font-size: 1.5vw;
+    border: 1px solid rgba(255, 255, 255, 0.793);
+    border-radius: 3rem;
+    padding: 1vh 2vw;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+.btn-origin-register {
+    display: inline-block;
+    color: #ffffff;
+    background-color: #695237d3;
+    font-family: "Arial";
+    font-weight: 500;
+    font-size: 1.4vw;
+    border: 1px solid rgba(255, 255, 255, 0.793);
+    border-radius: 3rem;
+    padding: 1vh 2vw;
+    margin-right: 3vw;
+    margin-left: 2vw;
+    text-align: center;
+}
