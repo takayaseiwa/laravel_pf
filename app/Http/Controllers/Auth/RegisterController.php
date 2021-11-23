@@ -29,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'home';
+    // protected $redirectTo = '/index';
 
     /**
      * Create a new controller instance.
@@ -70,4 +70,10 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public function redirectPath()
+    {
+        return '/index';
+    }
+
 }

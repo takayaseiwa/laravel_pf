@@ -28,7 +28,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = 'home';
+    // protected $redirectTo = '/index';
 
     /**
      * Create a new controller instance.
@@ -48,9 +48,14 @@ class LoginController extends Controller
     {
         // id=1 のゲストユーザー情報がDBに存在すれば、ゲストログインする
         if (Auth::loginUsingId(self::GUEST_USER_ID)) {
-            return redirect('/home');
+            return redirect('/index');
         }
 
         return redirect('/');
+    }
+
+    public function redirectPath()
+    {
+        return '/index';
     }
 }

@@ -15,11 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/index', 'ArticleController@index')->name('index');
+
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
 Route::group(['prefix' => 'article', 'middleware' => 'auth'], function(){
-    Route::get('index', 'ArticleController@index')->name('top');
 });
 
 // Route::resource('articles', 'ArticleController')->only([
@@ -28,4 +29,3 @@ Route::group(['prefix' => 'article', 'middleware' => 'auth'], function(){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
