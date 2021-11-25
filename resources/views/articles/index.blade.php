@@ -55,4 +55,5 @@
                 {{ $articles->links('pagination::bootstrap-4') }}
             </div>
         </div>
-    </div>@endsection
+    </div>
+@endsection
