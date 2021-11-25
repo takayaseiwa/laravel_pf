@@ -11,21 +11,30 @@
 |
 */
 
+use App\Http\Controllers\ArticleController;
+use Illuminate\Contracts\Cache\Store;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
 
+//一覧画面へ遷移
 Route::get('/index', 'ArticleController@index')->name('index');
 
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
-Route::group(['prefix' => 'article', 'middleware' => 'auth'], function(){
+Auth::routes();
+
+//HERO投稿
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('articles/create', 'ArticleController@create')->name('articles.create');
+    Route::post('articles/create', 'ArticleController@store')->name('articles.store');
 });
 
 // Route::resource('articles', 'ArticleController')->only([
 //     'index', 'show'
 // ]);
 
-Auth::routes();
 

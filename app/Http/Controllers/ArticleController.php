@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\ArticleRequest;
 
 class ArticleController extends Controller
 {
@@ -16,7 +17,7 @@ class ArticleController extends Controller
     public function index()
     {
         $articles = Article::with('user')->orderBy('created_at','desc')->paginate(5);
-        return view('article.index', ['articles' => $articles]);
+        return view('articles.index', ['articles' => $articles]);
     }
 
     /**
@@ -26,7 +27,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**
@@ -35,9 +36,18 @@ class ArticleController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ArticleRequest $request)
     {
-        //
+        $article = new Article;
+        $article->title = $request->title;
+        $article->category_id = $request->category_id;
+        $article->summary = $request->summary;
+        if($request->image){
+            $request->file('image')->storeAs('public/image', $article->id.'.'.$request->image->extension());
+        }
+        $article->user_id = Auth::id();
+        $article->save();
+        return redirect()->route('index');
     }
 
     /**
