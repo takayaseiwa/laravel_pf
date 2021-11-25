@@ -26,23 +26,20 @@
                                 @endif
                             </div>
                             <div class="card-body">
+                                @if(!empty($review->image))
+                                    <img class="book-image" src="{{ $article->image }}">
+                                    </img>
+                                @else
+                                    <img class="book-image" src="{{ asset('images/book.png') }}">
+                                    </img>
+                                @endif
                                 <div class="row">
-                                    <p class="col-md-4 text-md-right">期生</p>
-                                    <p class="col-md-6">期生</p>
+                                    <p class="col-md-4 text-md-right">名前</p>
+                                    <p class="col-md-6">名前</p>
                                 </div>
                                 <div class="row">
-                                    <p class="col-md-4 text-md-right">タイトル</p>
-                                    <p class="col-md-6"></p>
-                                </div>
-                                <div class="row">
-                                    <p class="col-md-4 text-md-right">URL</p>
-                                    <p class="col-md-6">
-                                        <a href="" target="_blank"></a>
-                                    </p>
-                                </div>
-                                <div class="row">
-                                    <p class="col-md-4 text-md-right">投稿日時</p>
-                                    <p class="col-md-6"></p>
+                                    <p class="col-md-4 text-md-right">カテゴリー</p>
+                                    <p class="col-md-6">カテゴリー</p>
                                 </div>
                                 <form>
                                     <div class="row">
