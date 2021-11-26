@@ -42,10 +42,13 @@ class ArticleController extends Controller
         $article->title = $request->title;
         $article->category_id = $request->category_id;
         $article->summary = $request->summary;
-        if($request->image){
-            $request->file('image')->storeAs('public/image', $article->id.'.'.$request->image->extension());
-        }
         $article->user_id = Auth::id();
+
+        if(request('image')){
+            $name = request()->file('image')->getClientOriginalName();
+            $file = request()->file('image')->move('storage/images',$name);
+            $article->image=$name;
+        }
         $article->save();
         return redirect()->route('index');
     }

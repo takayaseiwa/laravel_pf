@@ -10,11 +10,11 @@
                         <div class="card mb-5">
                             <div class="card-header d-flex justify-content-between align-items-center">
                                 <div class="font-weight-bold">
-                                    <i class="fas fa-user-edit mr-2">{{$article->user->name}}</i>
+                                    <i>{{$article->user->name}}</i>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <img src="{{ asset('storage/' .$article->image)}}">
+                                <img src="{{ Storage::url($article->image)}}" width="">
                                 <!-- @if(!empty($review->image))
                                     <img class="book-image" src="{{ $article->image }}">
                                     </img>
