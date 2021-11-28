@@ -14,7 +14,7 @@
                                     <p class="card-text">{{ $article->category->name }}</p>
                                     <div class="justify-content-between align-items-center">
                                         <div class="btn-Link">
-                                            <a href="http://blog.livedoor.jp/kinisoku/" class="btn btn-success text-white col-md-4 mx-auto">詳細を見る</a>
+                                            <a href="{{ route('articles.show',$article) }}" class="btn btn-success text-white col-md-4 mx-auto">詳細を見る</a>
                                         </div>
                                     </div>
                         </div>
