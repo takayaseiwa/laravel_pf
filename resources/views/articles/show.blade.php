@@ -22,7 +22,7 @@
                         <img class="book-image" src="{{asset('storage/images/'.$article->image)}}">
                         </div>
                         @if(Auth::id() == $article->user->id) 
-                        <a></a>                       
+                        <a href="{{ route('articles.edit, ['id' => $article->id]) }}"></a>                       
                         <button class="btn btn-block btn-success col-md-4 mx-auto py-2 mt-5" type="submit">
                             編集する
                         </button>
