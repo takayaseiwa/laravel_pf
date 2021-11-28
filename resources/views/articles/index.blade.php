@@ -3,7 +3,7 @@
 @section('content')
 <div class="album bg-light">
     <div class="container">
-            <<div class="row top_row">
+            <div class="row top_row">
                 @foreach ($articles as $article)
                     <div>
                         <img class="book-image" src="{{asset('storage/images/'.$article->image)}}">
@@ -20,7 +20,7 @@
                         </div>
                     </div>
                 @endforeach
-            <</div>
+            </div>
     </div>
 </div>
 <div class="col-md-4 mx-auto d-flex justify-content-center">
