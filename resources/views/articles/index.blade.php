@@ -6,15 +6,8 @@
             <<div class="row top_row">
                 @foreach ($articles as $article)
                     <div>
-                        <img src="{{ Storage::url($article->image) }}" width="100px">
-                        <!-- <div class="col-md-6">
-                            <div class="card mb-5">
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="font-weight-bold">
-                                        <i class="fas fa-user-edit mr-2">{{$article->user->name}}</i>
-                                    </div>
-                                </div>
-                                <div class="card-body">
+                        <img class="book-image" src="{{ Storage::url($article->image) }}" width="100px">
+                        <div class="card-body">
                                     <div class="row">
                                     <img src="{{ asset('storage/' .$article->image)}}">
                                     </div>
@@ -32,8 +25,6 @@
                                         </div>
                                     </form>
                                 </div>
-                            </div>
-                        </div> -->
                     </div>
                 @endforeach
             <</div>

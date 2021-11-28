@@ -58,3 +58,9 @@
     margin-left: 2vw;
     text-align: center;
 }
+.book-image {
+    margin-top: 10px;
+    object-fit: contain;
+    width: 348px;
+    height: 225px;
+}
