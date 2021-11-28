@@ -61,7 +61,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         return view('articles.show', compact('article'));
     }
 
@@ -73,7 +73,8 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        return view('articles.edit', compact('article'));
     }
 
     /**
@@ -83,9 +84,25 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ArticleRequest $request, $id)
     {
-        //
+        $article = Article::find($id);
+        //投稿者以外の更新を防ぐ
+        if($article->user_id !== Auth::id()){
+            return redirect()->route('index');
+        }
+        $article->title = $request->title;
+        $article->category_id = $request->category_id;
+        $article->summary = $request->summary;
+
+        if(request('image')){
+            $name = request()->file('image')->getClientOriginalName();
+            $file = request()->file('image')->move('storage/images', $name);
+            $article->image = $name;
+        }
+        $article->save();
+        return redirect()->route('index');
+
     }
 
     /**
