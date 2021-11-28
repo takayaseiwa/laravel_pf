@@ -34,7 +34,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/articles/{id}/show', 'ArticleController@show')->name('articles.show');
     Route::get('/articles/{id}/edit', 'ArticleController@edit')->name('articles.edit');
     Route::post('/articles/{id}/edit', 'ArticleController@update')->name('articles.update');
-
+    Route::get('/articles/{id}/delete', 'ArticleController@destroy')->name('articles.delete');
 });
 
 // Route::resource('articles', 'ArticleController')->only([
