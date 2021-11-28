@@ -86,7 +86,7 @@ class ArticleController extends Controller
      */
     public function update(ArticleRequest $request, $id)
     {
-        $article = Article::find($id);
+        $article = Article::findOrFail($id);
         //投稿者以外の更新を防ぐ
         if($article->user_id !== Auth::id()){
             return redirect()->route('index');
@@ -113,6 +113,12 @@ class ArticleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $article = Article::findOrFail($id);
+        //投稿者以外の更新を防ぐ
+        if($article->user_id !== Auth::id()){
+            return redirect()->route('index');
+        }
+        $article->delete();
+        return redirect()->route('index');
     }
 }

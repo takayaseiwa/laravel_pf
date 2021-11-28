@@ -24,7 +24,11 @@
                         @if(Auth::id() == $article->user->id) 
                         <a href="{{ route('articles.edit', ['id' => $article->id]) }}" class="btn btn-block btn-success col-md-4 mx-auto py-2 mt-5">
                             編集する
-                        </a>                       
+                        </a> 
+                        <form method="" action="{{ route('articles.delete', ['id' => $article->id]) }}">
+                        <button type="submit" class="btn btn-danger text-white col-4 py-2 mb-4" id="delete-btn">
+                            削除する
+                        </button>                                             
                         @endif
                         <a class='btn btn-block btn-secondary text-white col-md-4 mx-auto py-2  mb-4' href="{{ route('index')}}">戻る</a>
                     </div>
