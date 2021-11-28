@@ -16,6 +16,7 @@ class ArticleController extends Controller
      */
     public function index()
     {
+        //DBからデータを取得してorderByで並び替える
         $articles = Article::with('user')->orderBy('created_at','desc')->paginate(6);
         return view('articles.index', ['articles' => $articles]);
     }
