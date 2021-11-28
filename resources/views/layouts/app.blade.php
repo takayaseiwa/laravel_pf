@@ -90,10 +90,11 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-4">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center mt-3">
             @yield('content')
-        </main>
+        </div>
     </div>
 </body>
 </html>
