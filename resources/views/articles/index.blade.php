@@ -22,8 +22,8 @@
                 @endforeach
             </div>
     </div>
-</div>
-<div class="col-md-4 mx-auto d-flex justify-content-center">
-{{ $articles->links('pagination::bootstrap-4') }}
+    <div class="col-md-4 mx-auto d-flex justify-content-center">
+    {{ $articles->links('pagination::bootstrap-4') }}
+    </div>
 </div>
 @endsection
