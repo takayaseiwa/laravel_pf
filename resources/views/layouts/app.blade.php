@@ -66,7 +66,7 @@
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('articles.create') }}">
-                                    <i class="fas fa-edit">
+                                    <i>
                                         投稿する
                                     </i>
                                 </a>
