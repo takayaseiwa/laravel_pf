@@ -8,9 +8,7 @@
                     <div>
                         <img class="book-image" src="{{asset('storage/images/'.$article->image)}}">
                         <div class="card-body">
-                                    <p class="card-text">名前</p>
                                     <p class="card-text">{{ $article->title }}</p>
-                                    <p class="card-text">カテゴリー</p>
                                     <p class="card-text">{{ $article->category->name }}</p>
                                     <div class="justify-content-between align-items-center">
                                         <div class="btn-Link">
