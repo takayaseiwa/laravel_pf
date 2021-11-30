@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card mb-5">
                 <div class="card-header">
-                    <h3 class="text-center my-2"><i class="fas fa-pen mr-2"></i>HERO更新</h3>
+                    <h3 class="text-center my-2"><i class="fas fa-pen mr-1"></i>HERO更新</h3>
                 </div>
                 <form method="POST" action="{{ route('articles.update', ['id' => $article->id]) }}" enctype="multipart/form-data">
                     @csrf

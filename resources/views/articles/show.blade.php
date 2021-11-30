@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card mb-5">
                 <div class="card-header">
-                    <h3 class="text-center my-2"><i class="fas fa-file-code mr-2"></i>HERO詳細</h3>
+                    <h3 class="text-center my-2"><i class="fas fa-check-square mr-1"></i>HERO詳細</h3>
                 </div>
                     <div class="card-body col-md-8 mx-auto">
                         <div class="form-group mb-4">

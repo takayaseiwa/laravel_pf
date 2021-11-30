@@ -65,15 +65,15 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.create') }}">
-                                    <i>
-                                        投稿する
+                                <a class="nav-link active" href="{{ route('articles.create') }}">
+                                    <i class="fas fa-pen"></i>
+                                        HERO投稿
                                     </i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('articles.create') }}">
-                                    <i>
+                                <a class="nav-link active" href="{{ route('articles.create') }}">
+                                    <i class="fas fa-user-circle"></i>
                                     {{ Auth::user()->name }}
                                     </i>
                                 </a>
