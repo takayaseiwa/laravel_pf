@@ -65,16 +65,16 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('articles.create') }}">
+                                <a class="nav-link active" href="{{ route('users.mypage') }}">
                                     <i class="fas fa-pen"></i>
-                                        HERO投稿
+                                        マイページ
                                     </i>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('articles.create') }}">
-                                    <i class="fas fa-user-circle"></i>
-                                    {{ Auth::user()->name }}
+                                    <i class="fas fa-pen"></i>
+                                        HERO投稿
                                     </i>
                                 </a>
                             </li>
@@ -84,8 +84,8 @@
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
-                            </li>                        
-            @endguest
+                            </li>                    
+                        @endguest
                     </ul>
                 </div>
             </div>
