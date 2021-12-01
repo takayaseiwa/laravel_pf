@@ -65,6 +65,13 @@
                             @endif
                         @else
                             <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('users.mypage') }}">
+                                    <i class="fas fa-pen"></i>
+                                        マイページ
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('articles.create') }}">
                                     <i class="fas fa-pen"></i>
                                         HERO投稿
@@ -85,7 +92,7 @@
                                     @csrf
                                 </form>
                             </li>                        
-            @endguest
+                        @endguest
                     </ul>
                 </div>
             </div>

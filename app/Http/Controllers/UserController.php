@@ -50,7 +50,7 @@ class UserController extends Controller
     public function show()
     {
         $auth = Auth::user();
-        return view('users.show',compact('auth'));
+        return view('users.mypage',compact('auth'));
     }
 
     /**
