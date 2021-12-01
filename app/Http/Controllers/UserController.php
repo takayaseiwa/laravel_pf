@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Article;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
-class UsersController extends Controller
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,9 +47,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $auth = Auth::user();
+        return view('users.show',compact('auth'));
     }
 
     /**
