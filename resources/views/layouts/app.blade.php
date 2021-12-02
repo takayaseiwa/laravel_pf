@@ -66,8 +66,8 @@
                         @else
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('users.mypage') }}">
-                                    <i class="fas fa-pen"></i>
-                                        マイページ
+                                    <i class="fas fa-user-circle"></i>
+                                    マイページ
                                     </i>
                                 </a>
                             </li>
