@@ -37,8 +37,10 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/articles/{id}/delete', 'ArticleController@destroy')->name('articles.delete');
 });
 
-Route::get('/users', 'UserController@show')->name('users.mypage');
-
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/users', 'UserController@show')->name('users.mypage');
+    Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');
+});
 // Route::group(['middleware' => ['auth'],'as' => 'users.'], function(){
 
 // });
