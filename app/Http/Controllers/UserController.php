@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Requests\UserRequest;
 
 class UserController extends Controller
 {
@@ -72,9 +72,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(UserRequest $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $user->fill($request->all());
+        $user->save();
+        return redirect('top');
     }
 
     /**
