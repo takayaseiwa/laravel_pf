@@ -13,8 +13,8 @@
                     <h3 class="text-center my-2"><i class="fas fa-user mr-2"></i>ユーザー情報変更</h3>
                 </div>
                 <div class="card-body col-md-9 mx-auto">
-                    <form method="POST" action="{{ route('user.update', Auth::id()) }}">
-                        @method('PUT')
+                    <form method="POST" action="{{ route('users.update', Auth::id()) }}">
+                        @method('POST')
                         @csrf
                         <div class="card-body">
 

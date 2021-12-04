@@ -40,6 +40,7 @@ Route::group(['middleware' => 'auth'], function(){
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/users', 'UserController@show')->name('users.mypage');
     Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');
+    Route::post('/users/{id}', 'UserController@update')->name('users.update');
 });
 // Route::group(['middleware' => ['auth'],'as' => 'users.'], function(){
 
