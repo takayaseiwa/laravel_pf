@@ -36,7 +36,7 @@ Route::group(['middleware' => 'auth'], function(){
     Route::post('/articles/{id}/edit', 'ArticleController@update')->name('articles.update');
     Route::get('/articles/{id}/delete', 'ArticleController@destroy')->name('articles.delete');
 });
-
+//マイページ
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/users', 'UserController@show')->name('users.mypage');
     Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');

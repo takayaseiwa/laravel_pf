@@ -79,6 +79,13 @@
                                 </a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link active" href="{{ route('search.show') }}">
+                                    <i class="fas fa-pen"></i>
+                                        HERO検索
+                                    </i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('logout') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt mr-1"></i>ログアウト</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
