@@ -25,6 +25,8 @@ Route::get('/index', 'ArticleController@index')->name('index');
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
+Route::get('/show', 'SearchController@show')->name('search.show');
+
 Auth::routes();
 
 //HERO投稿
