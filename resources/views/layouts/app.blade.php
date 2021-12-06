@@ -73,7 +73,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('articles.create') }}">
-                                    <i class="fas fa-crown mr-2"></i>
+                                    <i class="fas fa-crown"></i>
                                         HERO投稿
                                     </i>
                                 </a>
