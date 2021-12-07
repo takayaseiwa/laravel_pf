@@ -25,29 +25,13 @@
                         </div>
                         <div class="form-group mb-4">
                             <p>カテゴリー<span class="text-danger">(※)</span></p>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category_id" id="1" value="1"{{ old('category_id',$article->category_id) == '1' ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="1">特撮</label>
-                                </div>                        
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category_id" id="2" value="2"{{ old('category_id',$article->category_id) == '2' ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="2">マンガ</label>
-                                </div>                        
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category_id" id="3" value="3"{{ old('category_id',$article->category_id) == '3' ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="3">スポーツ選手</label>
-                                </div>                        
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category_id" id="4" value="4"{{ old('category_id',$article->category_id) == '4' ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="4">歌手</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="category_id" id="5" value="5"{{ old('category_id',$article->category_id) == '5' ? 'checked' : '' }} />
-                                    <label class="form-check-label" for="5">その他</label>
-                                </div>                                                
-                                @error('category_id')
-                                    <div class="alert alert-danger">{{ $message }}</div>
-                                @enderror
+                            <select id="category_id" name="category_id" class="form-control">
+                                @foreach($categories as $id => $name)
+                                    <option value="{{ $id }}">
+                                        {{ $name }}
+                                    </option>
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group mb-4">
                             <label>推しポイント<span class="text-danger">(※)</span></label>

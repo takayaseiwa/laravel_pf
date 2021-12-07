@@ -78,7 +78,9 @@ class ArticleController extends Controller
     public function edit($id)
     {
         $article = Article::findOrFail($id);
-        return view('articles.edit', compact('article'));
+        $category = new Category;
+        $categories = $category->getLists();
+        return view('articles.edit', compact('article','categories'));
     }
 
     /**
