@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
 
@@ -28,7 +29,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        $categories = Category::orderBy('id','asc')->pluck('name','id');
+        return view('articles.create',['categories' => $categories]);
     }
 
     /**
