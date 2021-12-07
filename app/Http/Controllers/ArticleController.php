@@ -29,7 +29,8 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        $categories = Category::orderBy('id','asc')->pluck('name','id');
+        $category = new Category;
+        $categories = $category->getLists();
         return view('articles.create',['categories' => $categories]);
     }
 

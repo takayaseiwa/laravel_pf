@@ -24,10 +24,10 @@
                         </div>
                         <div class="form-group mb-4">
                             <p>カテゴリー<span class="text-danger">(※)</span></p>
-                            <select id="category_id" name="category_id" class="form-control {{ $errors->has('category_id') ? 'is-invalid' : '' }}">
-                                @foreach($categories as $id => $category)
-                                    <option value="{{ $category->id }}" {{old('category_id')==$category->id ? 'selected' : ''}}>
-                                        {{ $category->name }}
+                            <select id="category_id" name="category_id" class="form-control">
+                                @foreach($categories as $id => $name)
+                                    <option value="{{ $id }}">
+                                        {{ $name }}
                                     </option>
                                 @endforeach
                             </select>
