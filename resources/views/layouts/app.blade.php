@@ -80,7 +80,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="{{ route('search.show') }}">
-                                    <i class="fas fa-pen"></i>
+                                    <i class="fas fa-search"></i>
                                         HERO検索
                                     </i>
                                 </a>
