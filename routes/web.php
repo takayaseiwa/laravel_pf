@@ -26,6 +26,8 @@ Route::get('/index', 'ArticleController@index')->name('index');
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
 Route::get('/show', 'SearchController@show')->name('search.show');
+Route::post('/search', 'SearchController@search')->name('article.search');
+
 
 Auth::routes();
 

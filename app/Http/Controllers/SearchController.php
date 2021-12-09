@@ -13,4 +13,10 @@ class SearchController extends Controller
         $categories = $category->getLists();
         return view('articles.search', compact('article','categories'));
     }
+
+    public function search(Request $request)
+    {
+        dd($request->search);
+    }
+
 }

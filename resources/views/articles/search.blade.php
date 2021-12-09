@@ -8,16 +8,17 @@
                 <div class="card-header">
                     <h3 class="text-center my-2"><i class="fas fa-search"></i> HERO検索</h3>
                 </div>
-                <form method="GET" action="">
+                <form method="POST" action="{{ route('article.search') }}">
+                    @csrf
                     <div class="card-body col-md-9 mx-auto">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="searchWord">フリーワード</label>
-                                <input id="searchWord" type="searchWord" class="form-control"
-                                    name="searchWord" autofocus>
+                                <input id="search" type="search" class="form-control"
+                                    name="search" autofocus>
                             </div>
                             <div class="form-group mb-4">
-                                <p>カテゴリー<span class="text-danger">(※)</span></p>
+                                <p>カテゴリー</p>
                                 <select id="category_id" name="category_id" class="form-control">
                                     @foreach($categories as $id => $name)
                                         <option value="{{ $id }}">
