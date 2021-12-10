@@ -7,11 +7,13 @@ use App\Models\Category;
 
 class SearchController extends Controller
 {
-    public function show()
+    public function show(Request $request)
     {
         $category = new Category;
         $categories = $category->getLists();
-        return view('articles.search', compact('article','categories'));
+        $searchWord = $request->input('searchWord');
+        $categoryId = $request->input('categoryId');
+        return view('articles.search', compact('article','categories','searchWord','categoryId'));
     }
 
     public function search(Request $request)

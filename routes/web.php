@@ -25,10 +25,6 @@ Route::get('/index', 'ArticleController@index')->name('index');
 # ゲストユーザーログイン
 Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
-Route::get('/show', 'SearchController@show')->name('search.show');
-Route::post('/search', 'SearchController@search')->name('article.search');
-
-
 Auth::routes();
 
 //HERO投稿
@@ -46,6 +42,12 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/users/{id}/edit', 'UserController@edit')->name('users.edit');
     Route::post('/users/{id}', 'UserController@update')->name('users.update');
 });
+//検索画面
+Route::group(['middleware' => 'auth'], function(){
+    Route::get('/show', 'SearchController@show')->name('search.show');
+    Route::post('/search', 'SearchController@search')->name('article.search');
+});
+
 // Route::group(['middleware' => ['auth'],'as' => 'users.'], function(){
 
 // });
