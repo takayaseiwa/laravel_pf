@@ -14,12 +14,10 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="searchWord">フリーワード</label>
-                                <input id="search" type="search" class="form-control"
-                                    name="search" autofocus>
-                            </div>
+                                <input type="text" class="form-control" name="searchWord" value="{{ $searchWord }}">                            </div>
                             <div class="form-group mb-4">
                                 <p>カテゴリー</p>
-                                <select id="category_id" name="category_id" class="form-control">
+                                <select name="categoryId" class="form-control">
                                     @foreach($categories as $id => $name)
                                         <option value="{{ $id }}">
                                             {{ $name }}
