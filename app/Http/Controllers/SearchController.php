@@ -14,7 +14,7 @@ class SearchController extends Controller
         $categories = $category->getLists();
         $searchWord = $request->input('searchWord');
         $categoryId = $request->input('categoryId');
-        return view('articles.search', compact('article','categories','searchWord','categoryId'));
+        return view('articles.search', compact('categories','searchWord','categoryId'));
     }
 
     public function search(Request $request)
@@ -31,15 +31,15 @@ class SearchController extends Controller
         }
         //カテゴリー検索
         if (isset($categoryId)) {
-            $query->where('category_id' , $categoryId);
+            $query->where('category_id', $categoryId);
         }
 
-        $products = $query->orderBy('title' , 'asc')->paginate(9);
+        $products = $query->orderBy('title', 'asc')->paginate(9);
 
         $category = new Category;
         $categories = $category->getLists();
 
-        return view('articles.search', compact('article','categories','searchWord','categoryId'));
+        return view('articles.search', compact('products','categories','searchWord','categoryId'));
     }
 
     public static function escapeLike($str){

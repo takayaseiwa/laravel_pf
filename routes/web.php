@@ -45,7 +45,7 @@ Route::group(['middleware' => 'auth'], function(){
 //検索画面
 Route::group(['middleware' => 'auth'], function(){
     Route::get('/show', 'SearchController@show')->name('search.show');
-    Route::post('/search', 'SearchController@search')->name('article.search');
+    Route::get('/search', 'SearchController@search')->name('article.search');
 });
 
 // Route::group(['middleware' => ['auth'],'as' => 'users.'], function(){
