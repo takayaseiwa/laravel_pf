@@ -6,7 +6,7 @@
             <div class="row top_row">
                 @foreach ($articles as $article)
                     <div>
-                        <img class="book-image" src="{{asset('storage/images/'.$article->image)}}">
+                        <img class="hero-image" src="{{asset('storage/images/'.$article->image)}}">
                         <div class="card-body">
                                     <p class="card-text">{{ $article->title }}</p>
                                     <p class="card-text">{{ $article->category->name }}</p>

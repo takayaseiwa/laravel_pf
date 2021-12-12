@@ -9,19 +9,22 @@
                     <h3 class="text-center my-2"><i class="fas fa-check-square mr-1"></i>HERO詳細</h3>
                 </div>
                     <div class="card-body col-md-8 mx-auto">
-                        <div class="form-group mb-4">
-                            <label>{{ $article->title }}</label>
+                        <div class="row">
+                            <p class="col-md-4 text-md-right">名前</p>
+                            <p class="col-md-6">{{ $article->title }}</p>
                         </div>
-                        <div class="form-group mb-4">
-                            <p>{{ $article->category->name }}</p>
+                        <div class="row">
+                            <p class="col-md-4 text-md-right">カテゴリー</p>
+                            <p class="col-md-6">{{ $article->category->name }}</p>
                         </div>
-                        <div class="form-group mb-4">
-                            <label>{{ $article->summary }}</label>
+                        <div class="row">
+                            <p class="col-md-4 text-md-right">推しポイント</p>
+                            <p class="col-md-6">{{ $article->summary }}</p>
                         </div>
-                        <div class="form-group mb-4">
-                        <img class="book-image" src="{{asset('storage/images/'.$article->image)}}">
+                        <div class="row">
+                            <img class="d-block mx-auto img-fluid w-50" src="{{asset('storage/images/'.$article->image)}}">
                         </div>
-                        <div class="d-flex justify-content-center">
+                        <div class="d-flex justify-content-center my-4">
                             <a class='btn btn-secondary text-white col-md-3 py-2 mx-1 mb-4' href="{{ route('index')}}">戻る</a>
                             @if(Auth::id() == $article->user->id) 
                             <a href="{{ route('articles.edit', ['id' => $article->id]) }}" class="btn btn-success text-white col-md-3 py-2 mx-1 mb-4">
