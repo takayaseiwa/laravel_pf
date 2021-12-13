@@ -18,7 +18,7 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 2, 
-                'name' => 'マンガ',  
+                'name' => 'マンガ・アニメ',  
             ],
             [
                 'id' => 3, 
@@ -30,6 +30,18 @@ class CategoriesTableSeeder extends Seeder
             ],
             [
                 'id' => 5, 
+                'name' => '俳優・女優',  
+            ],
+            [
+                'id' => 6, 
+                'name' => '偉人',  
+            ],
+            [
+                'id' => 7, 
+                'name' => '学者',
+            ],
+            [
+                'id' => 8, 
                 'name' => 'その他',  
             ],
         ]);
