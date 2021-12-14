@@ -28,7 +28,8 @@
                             </div>
                         </div>
                         <div class="d-fix justify-content-center" style="text-align:center;">
-                            <button class="btn btn-primary text-white col-md-3 py-2 mx-1 mb-4">検索する</button>
+                            <button class="btn btn-primary text-white col-md-3 py-2 mx-1 mb-2">検索する</button>
+                            <a class='btn btn-block btn-secondary text-white col-md-3 mx-auto py-2  mb-3' href="{{ route('index')}}">戻る</a>
                         </div>
                     </div>
                 </form>
