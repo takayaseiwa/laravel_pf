@@ -36,8 +36,8 @@
                     <p>全{{ $products->count() }}件</p>
                     <div class="row">
                         @foreach($products as $product)
-                        <div class="row_index">
-                            <img class="hero-image" src="{{asset('storage/images/'.$product->image)}}">
+                        <div class="col-6">
+                            <img class="hero-image image_index" src="{{asset('storage/images/'.$product->image)}}">
                             <div class="card-body">
                                 <p class="card-text">{{ $product->title }}</p>
                                 <p class="card-text post-category">{{ $product->category->name }}</p>
