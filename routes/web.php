@@ -47,13 +47,6 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('/show', 'SearchController@show')->name('search.show');
     Route::get('/search', 'SearchController@search')->name('article.search');
 });
-
-// Route::group(['middleware' => ['auth'],'as' => 'users.'], function(){
-
-// });
-
-// Route::resource('articles', 'ArticleController')->only([
-//     'index', 'show'
-// ]);
-
+//コメント投稿
+Route::post('/comment/store', 'CommentController@store')->name('comment.store');
 
