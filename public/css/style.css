@@ -81,3 +81,14 @@
 .image-index {
     width: 180px;
 }
+
+.show-comment {
+    margin: 0 auto;
+    width: 700px;
+    max-width: 100%;
+}
+.comment-items {
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
