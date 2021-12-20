@@ -43,6 +43,32 @@
             </div>
         </div>
     </div>
+    <div class="show-comment mt-5">
+        <p class="h3 text-center my-3"><i class="far fa-comments mr-1"></i>コメント（ @php echo $comments->count()@endphp 件）</p>
+        @if ($comments->count())
+            <div class="comment-items">
+                @foreach ($article->comments as $comment)
+                    <dl class="row p-3 bg-white my-4 mx-3 align-items-center">
+                        <dt>{{ $comment->user->name }}</dt>
+                        <dd class="ml-4 mb-0">{{ $comment->comment }}</dd>
+                        @if(Auth::id() === $comment->user->id)
+                        <form name="deleteform" method="POST" action="{{ route('comment.destroy', $comment->id) }}" class="ml-auto">
+                            @method('delete')
+                            @csrf
+                            <input type="hidden" name="article_id" value="{{ $article->id }}">
+                            <input type="hidden" name="comment_id" value="{{ $comment->id }}">
+                            <button type="submit" class="ml-auto delete-comment" onClick="return CheckComment()"><i class="fas fa-trash-alt"></i></button>
+                        </form>
+                        @endif
+                    </dl>
+                @endforeach
+            </div>
+            @else
+            <div class="text-center mt-4">
+                <p class="mb-4">コメントはありません。</p>
+            </div>
+        @endif
+    </div>
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mb-4">

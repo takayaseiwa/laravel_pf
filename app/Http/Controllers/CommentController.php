@@ -22,4 +22,11 @@ class CommentController extends Controller
 
         return back();
     }
+
+    public function destroy(Request $request, Comment $comment)
+    {
+        $article = Article::find($request->article_id);
+        $comment->delete();
+        return redirect(route('articles.show', ['article' => $article]));
+    }
 }

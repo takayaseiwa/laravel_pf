@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Comment;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
 
@@ -66,7 +67,8 @@ class ArticleController extends Controller
     public function show($id)
     {
         $article = Article::findOrFail($id);
-        return view('articles.show', compact('article'));
+        $comments = $article->comments;
+        return view('articles.show', compact('article', 'comments'));
     }
 
     /**
@@ -120,7 +122,7 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         $article = Article::findOrFail($id);
-        //投稿者以外の更新を防ぐ
+        //投稿者以外の削除を防ぐ
         if($article->user_id !== Auth::id()){
             return redirect()->route('index');
         }
