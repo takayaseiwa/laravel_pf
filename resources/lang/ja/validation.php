@@ -153,7 +153,8 @@ return [
         'title' => '名前',
         'category_id'  => 'カテゴリ',
         'summary' => '推しポイント',
-        'image' => '画像'
+        'image' => '画像',
+        'comment' => 'コメント'
     ],
 
 ];

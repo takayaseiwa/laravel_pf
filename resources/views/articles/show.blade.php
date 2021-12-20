@@ -43,7 +43,7 @@
             </div>
         </div>
     </div>
-    <div class="show-comment mt-5">
+    <div class="show-comment mt-3">
         <p class="h3 text-center my-3"><i class="far fa-comments mr-1"></i>コメント（ @php echo $comments->count()@endphp 件）</p>
         @if ($comments->count())
             <div class="comment-items">
