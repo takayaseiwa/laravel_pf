@@ -1,17 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="bg-img">
-    <div class="absolute-jumbotron">
-        <h1 class="jumbotron-title">あなたにとっての<br>HEROは誰ですか？</h1>
-        <div class="jumbotron-text">自分に影響を与えたHEROを共有しよう！</div>
+<header class="header">
+    <div class="jumbotron">
+        <div class="container-fluid mb-3" style="background-color:rgba(255,255,255,0.8);">
+            <div class="container">
+                <div class="d-md-flex align-items-center">
+                    <div class="pt-3 col-md-8">
+                        <h1>YOUR HERO</h1>
+                        <p class="text-muted">あなたにとってのHEROは誰ですか？</p>
+                        <p class="text-muted">自分に影響を与えたHEROを共有しよう！</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-5">
+                    <a href="{{ route('login.guest') }}" class="btn btn-dark btn-block btn-lg mb-3 font-weight-bold p-3"
+                        role="button" aria-pressed="true">
+                        ゲストログイン
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="{{ route('login') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
+                        aria-pressed="true"><i class="fas fa-sign-in-alt mr-1"></i>ログイン
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="{{ route('register') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
+                        aria-pressed="true"><i class="fas fa-user-edit mr-1"></i>会員登録
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-@guest
-    <div class="absolute-button">
-        <a href="{{ route('register') }}" class="btn-origin-register">無料ユーザー登録</a>
-        <a href="{{ route('login') }}" class="btn-origin-login">ログイン</a>
-    </div>
-@endguest
-</div>
+
+
+
+</header>
+
 
 @endsection

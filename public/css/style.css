@@ -1,3 +1,23 @@
+.header {
+    height: 80vh;
+}
+
+.header {
+    background-position: center top;
+    position: relative;
+    height: 90%;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.jumbotron {
+    background-image: url("/img/FQ_20180116_hero01.jpeg");
+    background-size: cover;
+    background-position:  center;
+    background-repeat  : no-repeat;
+    margin-bottom: 0;
+}
+
 .jumbotron-title {
     font-size: 5vw;
     font-weight: bold;
