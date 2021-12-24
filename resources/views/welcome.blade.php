@@ -15,7 +15,7 @@
             </div>
             <div class="row mt-2">
                 <div class="col-md-5">
-                    <a href="{{ route('login.guest') }}" class="btn btn-dark btn-block btn-lg mb-3 font-weight-bold p-3"
+                    <a href="{{ route('login.guest') }}" class="btn btn-success btn-block btn-lg mb-3 font-weight-bold p-3"
                         role="button" aria-pressed="true">
                         ゲストログイン
                     </a>
@@ -33,9 +33,32 @@
             </div>
         </div>
     </div>
+    <main>
+                <h2 class="h1 font-weight-bold text-center pb-5">About</h2>
+                <div class="row mb-4">
+                    <div class="col-md-7 mb-4 mb-md-0">
+                        <img src="{{ asset('img/Powerful-pana.png')}}" alt=""  border="0" class="img-fluid">
+                    </div>
+                    <div class="col-md-5">
+                        <h3 class="pb-3 d-flex align-items-center"><span class="display-4">01</span>HERO投稿</h3>
+                        <p>あなたのお気に入りのHEROを投稿しよう！詳細・編集・削除はいつでも行えます</p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-7 mb-4 mb-md-0 order-md-2">
+                        <img src="{{ asset('img/Superhero-amico.png')}}" alt="" border="0" class="img-fluid">
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                        <h3 class="pb-3 d-flex align-items-center"><span class="display-4">02</span>検索機能</h3>
+                        <p>フリーワードやカテゴリーを選択することにより、登録されたHEROを検索できます！ 新たなHEROが見つかるかも！
+                        </p>
+                    </div>
+                </div>
+
+    
 
 
-
+    </main>
 </header>
 
 
