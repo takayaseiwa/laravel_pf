@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="d-md-flex align-items-center">
                     <div class="pt-3 col-md-8">
-                        <h1>YOUR HERO</h1>
+                        <h1>YOUR-HERO</h1>
                         <p class="text-muted">あなたにとってのHEROは誰ですか？</p>
                         <p class="text-muted">自分に影響を与えたHEROを共有しよう！</p>
                     </div>
@@ -49,9 +49,18 @@
                         <img src="{{ asset('img/Superhero-amico.png')}}" alt="" border="0" class="img-fluid">
                     </div>
                     <div class="col-md-5 order-md-1">
-                        <h3 class="pb-3 d-flex align-items-center"><span class="display-4">02</span>検索機能</h3>
+                        <h3 class="pb-3 d-flex align-items-center"><span class="display-4">02</span>HERO検索</h3>
                         <p>フリーワードやカテゴリーを選択することにより、登録されたHEROを検索できます！ 新たなHEROが見つかるかも！
                         </p>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-7 mb-4 mb-md-0">
+                        <img src="{{ asset('img/Superhero-pana.png')}}" alt=""  border="0" class="img-fluid">
+                    </div>
+                    <div class="col-md-5">
+                        <h3 class="pb-3 d-flex align-items-center"><span class="display-4">03</span>コメント機能</h3>
+                        <p>気になったHEROにはどんどんコメントしていきましょう！仲間の輪が広がるともっと楽しいですよ！</p>
                     </div>
                 </div>
 
