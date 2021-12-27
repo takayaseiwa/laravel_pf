@@ -36,7 +36,7 @@
     <main>
         <section class="py-5 bg-lightblue">
             <div class="container feature my-5">
-                <h2 class="h1 font-weight-bold text-center pb-5">About</h2>
+                <h2 class="h1 font-weight-lighter text-center pb-5">About</h2>
                 <div class="row mb-4">
                     <div class="col-md-7 mb-4 mb-md-0">
                         <img src="{{ asset('img/Powerful-pana.png')}}" alt=""  border="0" class="img-fluid">

@@ -117,7 +117,7 @@
 .feature h3 span {
     font-family: "Libre Caslon Text", serif;
     margin-right: 1rem;
-    border-bottom: 5px solid #b2c2e1;
+    border-bottom: 5px solid whitesmoke;
 }
 
 .col-md-3 {
@@ -125,5 +125,5 @@
 }
 
 .bg-lightblue {
-    background-color: #ecf7fb !important;
+    background-color: #ffcc99 !important;
 }
