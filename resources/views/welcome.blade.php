@@ -34,6 +34,8 @@
         </div>
     </div>
     <main>
+        <section class="py-5 bg-lightblue">
+            <div class="container feature my-5">
                 <h2 class="h1 font-weight-bold text-center pb-5">About</h2>
                 <div class="row mb-4">
                     <div class="col-md-7 mb-4 mb-md-0">
@@ -67,27 +69,24 @@
                     <h3 class="text-center mb-3">あなたも、自分にとってのHEROを共有してみませんか？</h3>
                     <div class="row mt-2">
                         <div class="col-md-5">
-                            <a href="{{ route('login.guest') }}" class="btn btn-dark btn-block btn-lg mb-3 font-weight-bold p-3" role="button"
-                                aria-pressed="true">
-                                ゲストログイン<i class="fas fa-arrow-right ml-3"></i>
+                            <a href="{{ route('login.guest') }}" class="btn btn-success btn-block btn-lg mb-3 font-weight-bold p-3"
+                                role="button" aria-pressed="true">
+                                ゲストログイン
                             </a>
                         </div>
-                        <div class="col-md-3">
-                            <a href="{{ route('login') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
-                                aria-pressed="true"><i class="fas fa-sign-in-alt mr-1"></i>ログイン
-                            </a>
-                        </div>
-                        <div class="col-md-3">
-                            <a href="{{ route('register') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
-                                aria-pressed="true"><i class="fas fa-user-edit mr-1"></i>会員登録
-                            </a>
-                        </div>
+                    <div class="col-md-3">
+                        <a href="{{ route('login') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
+                            aria-pressed="true"><i class="fas fa-sign-in-alt mr-1"></i>ログイン
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{{ route('register') }}" class="btn btn-secondary btn-block btn-lg font-weight-bold p-3" role="button"
+                            aria-pressed="true"><i class="fas fa-user-edit mr-1"></i>会員登録
+                        </a>
                     </div>
                 </div>
-
-    
-
-
+            </div>
+        </section>
     </main>
 </header>
 
