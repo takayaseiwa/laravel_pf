@@ -56,11 +56,15 @@
                                 <a class="nav-link active" href="{{ route('login.guest') }}">ゲストログイン</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                                <a class="nav-link active" href="{{ route('login') }}">
+                                <i class="fas fa-sign-in-alt mr-1"></i>{{ __('ログイン') }}
+                                </a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="{{ route('register') }}">{{ __('新規登録') }}</a>
+                                    <a class="nav-link active" href="{{ route('register') }}">
+                                    <i class="fas fa-user-edit mr-1"></i>{{ __('会員登録') }}
+                                    </a>
                                 </li>
                             @endif
                         @else
