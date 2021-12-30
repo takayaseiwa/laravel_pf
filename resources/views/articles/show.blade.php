@@ -22,7 +22,7 @@
                             <p class="col-md-6">{{ $article->summary }}</p>
                         </div>
                         <div class="row">
-                            <img class="d-block mx-auto img-fluid w-50" src="{{asset('storage/images/'.$article->image)}}">
+                            <img class="d-block mx-auto img-fluid w-50" src="{{ $article->image }}">
                         </div>
                         <div class="d-flex justify-content-center my-4">
                             <a class='btn btn-secondary text-white col-md-3 py-2 mx-1 mb-4' href="{{ route('index')}}">戻る</a>
