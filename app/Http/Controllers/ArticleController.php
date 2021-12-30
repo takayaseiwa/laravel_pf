@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Comment;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -44,16 +45,21 @@ class ArticleController extends Controller
     public function store(ArticleRequest $request)
     {
         $article = new Article;
-        $article->title = $request->title;
-        $article->category_id = $request->category_id;
-        $article->summary = $request->summary;
-        $article->user_id = Auth::id();
+        $article->fill($request->all());
 
-        if(request('image')){
-            $name = request()->file('image')->getClientOriginalName();
-            $file = request()->file('image')->move('storage/images', $name);
-            $article->image = $name;
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            $article->image = Storage::disk('s3')->url($path);
         }
+
+        $article->user_id = $request->user()->id;
+
+        // if(request('image')){
+        //     $name = request()->file('image')->getClientOriginalName();
+        //     $file = request()->file('image')->move('storage/images', $name);
+        //     $article->image = $name;
+        // }
         $article->save();
         return redirect()->route('index');
     }
@@ -99,16 +105,26 @@ class ArticleController extends Controller
         if($article->user_id !== Auth::id()){
             return redirect()->route('index');
         }
-        $article->title = $request->title;
-        $article->category_id = $request->category_id;
-        $article->summary = $request->summary;
+        $article->fill($request->all());
 
-        if(request('image')){
-            $name = request()->file('image')->getClientOriginalName();
-            $file = request()->file('image')->move('storage/images', $name);
-            $article->image = $name;
+        if ($request->file('image')) {
+            $image = $request->file('image');
+            $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            $article->image = Storage::disk('s3')->url($path);
         }
+
+        $article->user_id = $request->user()->id;
         $article->save();
+
+        // $article->title = $request->title;
+        // $article->category_id = $request->category_id;
+        // $article->summary = $request->summary;
+
+        // if(request('image')){
+        //     $name = request()->file('image')->getClientOriginalName();
+        //     $file = request()->file('image')->move('storage/images', $name);
+        //     $article->image = $name;
+        // }
         return redirect()->route('index');
 
     }
