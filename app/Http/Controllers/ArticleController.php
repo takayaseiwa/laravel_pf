@@ -54,12 +54,6 @@ class ArticleController extends Controller
         }
 
         $article->user_id = $request->user()->id;
-
-        // if(request('image')){
-        //     $name = request()->file('image')->getClientOriginalName();
-        //     $file = request()->file('image')->move('storage/images', $name);
-        //     $article->image = $name;
-        // }
         $article->save();
         return redirect()->route('index');
     }
@@ -115,18 +109,7 @@ class ArticleController extends Controller
 
         $article->user_id = $request->user()->id;
         $article->save();
-
-        // $article->title = $request->title;
-        // $article->category_id = $request->category_id;
-        // $article->summary = $request->summary;
-
-        // if(request('image')){
-        //     $name = request()->file('image')->getClientOriginalName();
-        //     $file = request()->file('image')->move('storage/images', $name);
-        //     $article->image = $name;
-        // }
         return redirect()->route('index');
-
     }
 
     /**
