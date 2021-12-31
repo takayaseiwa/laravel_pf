@@ -49,7 +49,9 @@ class ArticleController extends Controller
 
         if ($request->file('image')) {
             $image = $request->file('image');
+            //バケットのmyprefixフォルダへアップロードする
             $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            //アップロードした画像のパスを取得
             $article->image = Storage::disk('s3')->url($path);
         }
 
@@ -103,7 +105,9 @@ class ArticleController extends Controller
 
         if ($request->file('image')) {
             $image = $request->file('image');
+            //バケットのmyprefixフォルダへアップロードする
             $path = Storage::disk('s3')->putFile('myprefix', $image, 'public');
+            //アップロードした画像のパスを取得
             $article->image = Storage::disk('s3')->url($path);
         }
 
