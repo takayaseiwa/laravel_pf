@@ -38,7 +38,7 @@
                     <div class="row">
                         @foreach($products as $product)
                         <div class="col-6">
-                            <img class="hero-image image_index" src="{{ $article->image }}">
+                            <img class="hero-image image_index" src="{{ $product->image }}">
                             <div class="card-body">
                                 <p class="card-text">{{ $product->title }}</p>
                                 <p class="card-text post-category">{{ $product->category->name }}</p>
