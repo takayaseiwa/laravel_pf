@@ -21,7 +21,9 @@
                             </p>
                         </div>
                         <div class="d-flex justify-content-center">
+                            @unless(Auth::id() == 1)
                             <a class='btn btn-secondary text-white col-md-3 py-2 mx-1 mb-2' href="{{ route('users.edit', Auth::user()) }}">編集する</a>
+                            @endunless
                         </div>
                         <div class="d-flex justify-content-center">
                             <a class='btn btn-secondary text-white col-md-3 py-2 mx-1 mb-2' href="{{ route('index') }}">戻る</a>
