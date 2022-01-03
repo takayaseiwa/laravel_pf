@@ -39,3 +39,7 @@ URL:https://your-hero-tky.herokuapp.com/
 ・Drawio（ER図）
 
 ・Git/GitHub
+
+DB設計
+-------
+![スクリーンショット 2022-01-03 18 27 46](https://user-images.githubusercontent.com/66620596/147915849-6bec4e79-c1cd-4529-8054-84f46d330dd5.png)
