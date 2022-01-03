@@ -19,11 +19,13 @@ URL:https://your-hero-tky.herokuapp.com/
 **バックエンド**
 
 ・PHP 7.2.34
+
 ・Laravel Framework 6.20.43
 
 **インフラ**
 
 ・Heroku
+
 ・AWS(S3を使用した画像アップロード)
 
 **DB**
@@ -33,5 +35,7 @@ URL:https://your-hero-tky.herokuapp.com/
 **その他**
 
 ・VSCode
+
 ・Drawio（ER図）
+
 ・Git/GitHub
