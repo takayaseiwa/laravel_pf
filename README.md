@@ -30,7 +30,7 @@ URL:https://your-hero-tky.herokuapp.com/
 
 **DB**
 
-開発・本番環境 MySQL
+・開発・本番環境 MySQL
 
 **その他**
 
