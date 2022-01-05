@@ -1,6 +1,7 @@
 プロジェクト名:YOUR-HERO
 ----------
 自分に影響を与えたHEROを共有するアプリです
+
 URL:https://your-hero-tky.herokuapp.com/
 ![スクリーンショット 2022-01-03 11 49 22](https://user-images.githubusercontent.com/66620596/147896689-2eb73db7-b66d-402a-9b51-ed7f9c21e167.png)
 
@@ -43,3 +44,26 @@ URL:https://your-hero-tky.herokuapp.com/
 DB設計
 -------
 ![スクリーンショット 2022-01-03 18 27 46](https://user-images.githubusercontent.com/66620596/147915849-6bec4e79-c1cd-4529-8054-84f46d330dd5.png)
+
+機能一覧
+--------
+
+**会員登録関連**
+
+・アカウント新規登録、プロフィール編集機能
+
+・ログイン、ログアウト機能
+
+・ゲストユーザーログイン機能
+
+**投稿関連機能**
+
+・HERO投稿、HERO編集、HERO削除（論理削除)
+
+・画像アップロード機能 (AWS S3バケット)
+
+・HERO検索機能
+
+・コメント関連機能
+
+・いいね機能(実装予定)
