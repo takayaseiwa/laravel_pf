@@ -68,6 +68,11 @@ DB設計
 
 ・いいね機能(実装予定)
 
+HERO投稿
+---------
+![hero投稿](https://user-images.githubusercontent.com/66620596/148779942-906a0ff5-dcd7-4829-a412-2bea832777ea.gif)
+
+
 今後追加していきたい機能など
 ---------
 
