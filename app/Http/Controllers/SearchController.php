@@ -19,21 +19,22 @@ class SearchController extends Controller
 
     public function search(Request $request)
     {
+        //入力される値nameの中身を定義する
         $searchWord = $request->input('searchWord');
         $categoryId = $request->input('categoryId');
 
         $query = Article::query();
         
-        //フリーワード検索
+        //HERO名が入力された場合、articlesテーブルから一致するHEROを$queryに代入
         if (isset($searchWord)) {
             $query->where('title', 'like', '%' . self::escapeLike($searchWord) . '%')
                 ->orWhere('summary', 'like', '%' . self::escapeLike($searchWord) . '%');
         }
-        //カテゴリー検索
+        //カテゴリが入力された場合、categoriesテーブルから一致するHEROを$queryに代入
         if (isset($categoryId)) {
             $query->where('category_id', $categoryId);
         }
-
+        //$queryをcategory_idの昇順に並び替えて$productsに代入
         $products = $query->orderBy('title', 'asc')->paginate(9);
 
         $category = new Category;
@@ -43,6 +44,7 @@ class SearchController extends Controller
     }
 
     public static function escapeLike($str){
+        //「\\」「%」「_」などの記号を文字としてエスケープさせる
         return str_replace(['\\', '%', '_'], ['\\\\', '\%', '\_'], $str);
     }
 
