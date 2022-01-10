@@ -72,6 +72,14 @@ HERO投稿
 ---------
 ![hero投稿](https://user-images.githubusercontent.com/66620596/148779942-906a0ff5-dcd7-4829-a412-2bea832777ea.gif)
 
+HERO検索
+---------
+![hero検索](https://user-images.githubusercontent.com/66620596/148780618-7ddd8c39-7675-4f9b-8a44-6b6c9ec106fe.gif)
+
+コメント機能
+---------
+![heroコメント](https://user-images.githubusercontent.com/66620596/148780891-68ec1cb5-21de-47d0-90f5-bbdea54d1282.gif)
+
 
 今後追加していきたい機能など
 ---------
